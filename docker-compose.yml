@@ -1,0 +1,16 @@
+services:
+  fcc:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        UPSTREAM_REPO: ${UPSTREAM_REPO:-https://github.com/Alishahryar1/free-claude-code.git}
+        UPSTREAM_REF: ${UPSTREAM_REF:-9a2c5fbeb90c79cd0139a4044e05fee7d1ba056a}
+    container_name: free-claude-code-isolated
+    env_file:
+      - .env.container
+    ports:
+      - "18082:8082"
+    restart: unless-stopped
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

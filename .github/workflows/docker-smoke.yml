@@ -1,0 +1,32 @@
+name: docker-smoke
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate scripts
+        run: |
+          bash -n start.sh
+          bash -n stop.sh
+          bash -n verify.sh
+
+      - name: Prepare runtime env
+        run: cp .env.container.example .env.container
+
+      - name: Build and start wrapper
+        run: ./start.sh
+
+      - name: Verify health
+        run: ./verify.sh
+
+      - name: Stop wrapper
+        if: always()
+        run: ./stop.sh

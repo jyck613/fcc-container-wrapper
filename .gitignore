@@ -1,0 +1,12 @@
+.env.container
+*.swp
+*.swo
+*.tmp
+.DS_Store
+
+# Local nested clone cache (do not commit upstream source checkout)
+free-claude-code/
+
+# Logs and local artifacts
+logs/
+*.log
