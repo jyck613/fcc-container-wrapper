@@ -121,3 +121,24 @@ UPSTREAM_REF=<commit-or-tag> \
 - SemVer tags for wrapper: `v0.1.0`, `v0.2.0`, ...
 - release notes include upstream ref, changes, and migration notes
 - no secrets in repo; use `.env.container.example` only
+
+
+## Folder structure
+
+```text
+fcc-container-wrapper/
+|- Dockerfile
+|- docker-compose.yml
+|- start.sh
+|- stop.sh
+|- verify.sh
+|- .env.container.example
+|- docs/
+|  |- ARCHITECTURE.md
+|  |- PROVENANCE.md
+|  |- RELEASE.md
+|- README.md
+|- CHANGELOG.md
+|- SECURITY.md
+|- CONTRIBUTING.md
+```
