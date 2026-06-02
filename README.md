@@ -21,6 +21,8 @@ runtime story:
 
 ## Where this is forked from
 
+
+[Quick Start](#install) · [Providers](#setup) · [Clients](#claude-cli-host-side) · [Integrations](#upstream-pin-management) · [Development](#release-strategy)
 - Upstream repository:
   https://github.com/Alishahryar1/free-claude-code
 - Wrapper build pin (default):
