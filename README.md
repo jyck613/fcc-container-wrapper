@@ -1,17 +1,14 @@
 <h1 align="center">🐳 FCC Container Wrapper ⚡</h1>
 
-
-
-
+<p align="center">
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Release](https://img.shields.io/github/v/release/jyck613/fcc-container-wrapper?display_name=tag)](https://github.com/jyck613/fcc-container-wrapper/releases)
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker&logoColor=white)](Dockerfile)
+</p>
 
-
+<p align="center">
 [Quick Start](#install) · [Development](#release-strategy)
-
-
-
+</p>
 
 Production-style container wrapper around
 [Alishahryar1/free-claude-code](https://github.com/Alishahryar1/free-claude-code),
@@ -21,13 +18,25 @@ Claude CLI integration.
 
 
 
+
+
+
+
 ## Why this exists
+
+
+
+
 
 
 
 
 The upstream project is excellent, but teams often need a more predictable local
 runtime story:
+
+
+
+
 
 
 
@@ -40,7 +49,15 @@ runtime story:
 
 
 
+
+
+
+
 ## Where this is forked from
+
+
+
+
 
 
 
@@ -55,7 +72,15 @@ runtime story:
 
 
 
+
+
+
+
 ## What it does
+
+
+
+
 
 
 
@@ -68,12 +93,18 @@ runtime story:
 
 
 
+
+
+
+
 ## Why this architecture
+
+
+
+
 
 
 
 
 - **Reproducibility**: image build is pinned to a known upstream ref
 - **Isolation**: host Node/Claude workflow stays separate from Python runtime
-- **Operational clarity**: explicit start, stop, and verify scripts
-- **Safer publishing**: wrapper can evolve independently from upstream internals
