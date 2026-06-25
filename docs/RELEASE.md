@@ -4,7 +4,7 @@
 
 Use SemVer for wrapper releases:
 
-- `v0.1.0` initial public wrapper release
+- `v0.1.1` latest wrapper release
 - `v0.2.0` backward-compatible feature updates
 - `v1.0.0` stable release baseline
 
@@ -26,8 +26,8 @@ bash -n start.sh stop.sh verify.sh
 ## Tag and release
 
 ```bash
-git tag -a v0.1.0 -m "Initial public wrapper release"
-git push origin v0.1.0
+git tag -a v0.1.1 -m "Release upstream pin refresh"
+git push origin v0.1.1
 ```
 
 Create GitHub Release notes including:

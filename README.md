@@ -4,12 +4,12 @@
 [![Release](https://img.shields.io/github/v/release/jyck613/fcc-container-wrapper?display_name=tag)](https://github.com/jyck613/fcc-container-wrapper/releases)
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker&logoColor=white)](Dockerfile)
 
-[Quick Start](#install) · [Development](#release-strategy)
-
 Production-style container wrapper around
 [Alishahryar1/free-claude-code](https://github.com/Alishahryar1/free-claude-code),
 with pinned upstream builds, reproducible local startup, and clean host-side
 Claude CLI integration.
+
+[Quick Start](#install) · [Providers](#setup) · [Clients](#claude-cli-host-side) · [Integrations](#upstream-pin-management) · [Development](#release-strategy)
 
 ## Why this exists
 
@@ -24,11 +24,11 @@ runtime story:
 ## Where this is forked from
 
 - Upstream repository:
-  https://github.com/Alishahryar1/free-claude-code
+	https://github.com/Alishahryar1/free-claude-code
 - Wrapper build pin (default):
-  `9a2c5fbeb90c79cd0139a4044e05fee7d1ba056a`
+	`d281d52ced3ae39e853b524074d4230def518ed5`
 - This repo wraps upstream runtime behavior and does not modify upstream code in
-  place.
+	place.
 
 ## What it does
 
@@ -120,7 +120,7 @@ UPSTREAM_REF=<commit-or-tag> \
 
 ## Release strategy
 
-- SemVer tags for wrapper: `v0.1.0`, `v0.2.0`, ...
+- SemVer tags for wrapper: `v0.1.0`, `v0.1.1`, `v0.2.0`, ...
 - release notes include upstream ref, changes, and migration notes
 - no secrets in repo; use `.env.container.example` only
 
