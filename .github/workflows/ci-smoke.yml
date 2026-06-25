@@ -1,0 +1,56 @@
+name: CI Smoke
+
+on:
+  pull_request:
+    paths:
+      - "Dockerfile"
+      - "docker-compose.yml"
+      - "start.sh"
+      - "stop.sh"
+      - "verify.sh"
+      - ".env.container.example"
+      - ".github/workflows/**"
+  push:
+    paths:
+      - "Dockerfile"
+      - "docker-compose.yml"
+      - "start.sh"
+      - "stop.sh"
+      - "verify.sh"
+      - ".env.container.example"
+      - ".github/workflows/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Shell syntax check
+        run: bash -n start.sh stop.sh verify.sh
+
+      - name: Prepare env
+        run: cp .env.container.example .env.container
+
+      - name: Start wrapper
+        run: ./start.sh
+
+      - name: Verify health
+        run: ./verify.sh
+
+      - name: Capture diagnostics on failure
+        if: failure()
+        run: |
+          docker ps -a
+          docker logs --tail 200 free-claude-code-isolated || true
+
+      - name: Stop wrapper
+        if: always()
+        run: ./stop.sh
