@@ -16,7 +16,7 @@ This project provides operational packaging around upstream:
 
 ## Default upstream pin
 
-- `d281d52ced3ae39e853b524074d4230def518ed5`
+- `6a48811a9a648110c894738ee62dcb48b69cef96`
 
 ## How to update upstream pin
 
