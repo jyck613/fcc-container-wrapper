@@ -6,6 +6,14 @@ The format follows Keep a Changelog and Semantic Versioning.
 
 ## [Unreleased]
 
+### Changed
+- Reworked the container build into a multi-stage `Dockerfile`, shrinking the
+  runtime image from ~545 MB to ~244 MB. Build tooling (`git`, `curl`, `uv`) is
+  now confined to a builder stage, runtime dependencies are installed without the
+  dev group (`uv sync --no-dev`), the base image's system Python is reused instead
+  of downloading a managed interpreter, and the duplicate source copy plus cloned
+  `.git` history are dropped from the final image.
+
 ## [0.1.1] - 2026-06-24
 
 ### Changed

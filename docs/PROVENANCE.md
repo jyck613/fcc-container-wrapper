@@ -14,6 +14,17 @@ This project provides operational packaging around upstream:
 - setup/use docs
 - CI smoke checks
 
+## Container image
+
+The runtime image is produced by a multi-stage `Dockerfile`:
+
+- a builder stage clones the pinned upstream source and resolves runtime
+  dependencies with `uv sync --frozen --no-dev`
+- the final stage carries only Python plus the prepared app and virtualenv,
+  omitting `git`, `curl`, `uv`, dev dependencies, and upstream `.git` history
+
+This keeps the runtime image at roughly 244 MB.
+
 ## Default upstream pin
 
 - `4601b80a36661e20a139827ec4b4012b1695570c`
