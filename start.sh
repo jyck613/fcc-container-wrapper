@@ -5,7 +5,7 @@ cd "$(dirname "$0")"
 IMAGE_NAME="free-claude-code-isolated:latest"
 CONTAINER_NAME="free-claude-code-isolated"
 UPSTREAM_REPO="${UPSTREAM_REPO:-https://github.com/Alishahryar1/free-claude-code.git}"
-UPSTREAM_REF="${UPSTREAM_REF:-befa0ebb93817d48ccd2c8991b374e1d2f5d74dd}"
+UPSTREAM_REF="${UPSTREAM_REF:-a5310f4a0f79ad211ce686e62fd3729fffa3625f}"
 
 if [[ ! -f .env.container ]]; then
   echo "Missing .env.container. Create it from .env.container.example first."

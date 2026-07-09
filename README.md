@@ -26,7 +26,7 @@ runtime story:
 - Upstream repository:
 	https://github.com/Alishahryar1/free-claude-code
 - Wrapper build pin (default):
-	`befa0ebb93817d48ccd2c8991b374e1d2f5d74dd`
+	`a5310f4a0f79ad211ce686e62fd3729fffa3625f`
 - This repo wraps upstream runtime behavior and does not modify upstream code in
 	place.
 
