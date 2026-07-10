@@ -2,7 +2,7 @@
 
 # Pinned upstream source for reproducible builds.
 ARG UPSTREAM_REPO=https://github.com/Alishahryar1/free-claude-code.git
-ARG UPSTREAM_REF=a5310f4a0f79ad211ce686e62fd3729fffa3625f
+ARG UPSTREAM_REF=3c9d0ced7671c42b0de15b9575f56805e0031fef
 
 # ----------------------------------------------------------------------------
 # Builder stage: clone upstream and resolve dependencies. None of the build
