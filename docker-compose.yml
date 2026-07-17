@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile
       args:
         UPSTREAM_REPO: ${UPSTREAM_REPO:-https://github.com/Alishahryar1/free-claude-code.git}
-        UPSTREAM_REF: ${UPSTREAM_REF:-74ddf478b1100dc3bb6196e100e4c3ee5a9c1e18}
+        UPSTREAM_REF: ${UPSTREAM_REF:-f77fe8581c841323c495d20ff0a7c8648de914a8}
     container_name: free-claude-code-isolated
     env_file:
       - .env.container
