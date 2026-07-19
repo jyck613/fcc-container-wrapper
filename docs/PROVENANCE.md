@@ -27,7 +27,7 @@ This keeps the runtime image at roughly 244 MB.
 
 ## Default upstream pin
 
-- `f77fe8581c841323c495d20ff0a7c8648de914a8`
+- `b89e849fff6180aad177ee437b4b617a0b913fd9`
 
 ## How to update upstream pin
 
