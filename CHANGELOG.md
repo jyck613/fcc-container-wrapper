@@ -17,7 +17,7 @@ The format follows Keep a Changelog and Semantic Versioning.
 ## [0.1.1] - 2026-06-24
 
 ### Changed
-- Bumped default `UPSTREAM_REF` from `9a2c5fbeb90c79cd0139a4044e05fee7d1ba056a` to `d37b34b02fb7b753c23ffc9353d5b3a367dcc02e`.
+- Bumped default `UPSTREAM_REF` from `9a2c5fbeb90c79cd0139a4044e05fee7d1ba056a` to `e614c49cf0531a611244e4341a9142efeef6064d`.
 
 ## [0.1.0] - 2026-06-01
 
